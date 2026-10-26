@@ -500,6 +500,45 @@ a{color:inherit}
 .bpad svg{width:12cqw;height:7cqw;stroke:#fff;fill:none;stroke-width:1.4}
 .gnote{font-size:.76cqw;color:var(--faint);line-height:1.9}
 
+/* ============ P9 增强 + sheet ============ */
+.devstat{font-size:.86cqw;color:var(--dim);margin:-.6cqw 0 1cqw}
+.devstat b{color:var(--ok)}
+.snapcard{background:var(--card2);border:1px solid var(--line);border-radius:.8cqw;padding:1.2cqw 1.1cqw}
+.snapcard .h{font-size:.88cqw;font-weight:800;margin-bottom:.5cqw}
+.snapcard .sd{font-size:.76cqw;color:var(--dim);line-height:1.8;margin-bottom:.9cqw}
+.snapcard .sd b{color:var(--txt)}
+.sb{display:flex;gap:.7cqw}
+.sbtn,.sbtn2,.sbtn3{flex:1;text-align:center;border-radius:.6cqw;padding:.85cqw 0;font-size:.84cqw;font-weight:700}
+.sbtn{background:#fff;color:#000}
+.sbtn2{background:var(--card);border:1px solid var(--line);color:var(--txt)}
+.sbtn3{background:transparent;border:1px solid var(--line);color:var(--dim)}
+.sheet{position:absolute;inset:0;z-index:40;display:none;align-items:center;justify-content:center;
+  background:rgba(0,0,0,.58);backdrop-filter:blur(5px)}
+.sheet.open{display:flex}
+.sheet-panel{width:58%;max-width:44cqw;background:#0f0f17;border:1px solid var(--line);border-radius:1cqw;
+  padding:1.8cqw 1.7cqw;box-shadow:0 3cqw 8cqw rgba(0,0,0,.7)}
+.sheet-panel .shh{font-size:1.25cqw;font-weight:800;margin-bottom:.3cqw}
+.sheet-panel .shs{font-size:.78cqw;color:var(--faint);margin-bottom:1.2cqw}
+.srow{display:flex;justify-content:space-between;font-size:.86cqw;padding:.7cqw 0;border-bottom:1px solid var(--card2)}
+.srow span{color:var(--faint)}
+.srow b{font-weight:600}
+.sheet-panel .sacts{display:flex;gap:.7cqw;margin-top:1.3cqw}
+/* ============ P12 设置 ============ */
+.settings{flex:1;display:flex;gap:1.6cqw;padding:1cqw 2.4cqw 2.2cqw;min-height:0}
+.setcol{flex:1;display:flex;flex-direction:column;gap:1.2cqw;min-height:0;overflow:hidden}
+.setsec{background:var(--card2);border:1px solid var(--line);border-radius:.9cqw;padding:1.2cqw 1.1cqw}
+.setsec .sh2{font-size:.88cqw;font-weight:800;color:var(--dim);margin-bottom:.9cqw;letter-spacing:.12em}
+.setrow{display:flex;align-items:center;gap:1cqw;border-radius:.7cqw;padding:.95cqw .8cqw;margin-bottom:.5cqw}
+.setrow:last-child{margin-bottom:0}
+.setrow.focused{background:var(--card)}
+.setrow .mi{flex:1;min-width:0}
+.setrow .t{font-size:.95cqw;font-weight:600}
+.setrow .d{font-size:.76cqw;color:var(--faint);margin-top:.25cqw}
+.setrow .tgl .lb{color:var(--dim)}
+.setrow.on .tk::after{left:calc(100% - 1.35vh + .09vh)}
+.setrow.on .tgl .lb{color:var(--ok)}
+.setrow .arrow{color:var(--faint);font-size:1cqw}
+
 /* ============ 框外：页面切换条 + d-pad + toast ============ */
 .deck{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:2.2vh;max-width:1180px}
 .dchip{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--dim);border-radius:99px;
@@ -546,7 +585,7 @@ a{color:inherit}
     <section class="page" id="p1">
       <div class="ov">
         <div class="h">这台电视是我的。</div>
-        <div class="s">tv-mod 原型总览，<b>11 页，P0-P3 全模块</b>。电视框内按 <b>方向键 + OK</b> 操作（手机点右下角遥控盘），逐页评审。</div>
+        <div class="s">tv-mod 原型总览，<b>12 页，P0-P3 全模块</b>。电视框内按 <b>方向键 + OK</b> 操作（手机点右下角遥控盘），逐页评审。</div>
         <div class="ovgrid">
           <div class="ovcard foc" data-act="nav" data-to="2"><div class="no">01 · 开始</div><div class="t">开始评审</div><div class="d">从桌面开始走一遍完整体验</div></div>
           <div class="ovcard foc" data-act="nav" data-to="2"><div class="no">02 · M6</div><div class="t">桌面</div><div class="d">AppleTV 风：大续看卡 + 横排应用，零广告零推荐</div></div>
@@ -559,6 +598,7 @@ a{color:inherit}
           <div class="ovcard foc" data-act="nav" data-to="9"><div class="no">09 · M10</div><div class="t">清理维护</div><div class="d">可逆停用 + 一键恢复，全程留日志</div></div>
           <div class="ovcard foc" data-act="nav" data-to="10"><div class="no">10 · M12</div><div class="t">音乐律动</div><div class="d">听歌 + 灯带跟着节奏呼吸</div></div>
           <div class="ovcard foc" data-act="nav" data-to="11"><div class="no">11 · M13</div><div class="t">游戏</div><div class="d">遥控器 / 手机手柄 / 蓝牙手柄三层输入</div></div>
+          <div class="ovcard foc" data-act="nav" data-to="12"><div class="no">12 · 全局</div><div class="t">设置</div><div class="d">配置中心 · 免确认安装 · 外观 · 数据导出</div></div>
         </div>
         <div class="ovfoot"><span>焦点光环=遥控选中态 · OK 键激活</span><span>媒体内容均为示意（合成海报 / 虚构片名）</span></div>
       </div>
@@ -572,7 +612,7 @@ a{color:inherit}
           <div class="tab foc cur" data-act="nav" data-to="5">媒体库</div>
           <div class="tab foc" data-act="nav" data-to="7">投屏</div>
           <div class="tab foc" data-act="nav" data-to="4">应用</div>
-          <div class="tab foc" data-act="nav" data-to="9">设置</div>
+          <div class="tab foc" data-act="nav" data-to="12">设置</div>
         </div>
         <div class="spacer"></div>
         <div class="status">
@@ -856,6 +896,7 @@ a{color:inherit}
         <div class="mlist">
           <div class="h">清理维护</div>
           <div class="s"><b>pm disable-user 可逆停用</b> · 不卸载 · 不改系统分区 · 每一步都有日志 · 适配库 <b style="color:var(--txt)">131 型号 / 46 品牌</b>（社区数据·MIT） · 配置 v2026.10 <b style="color:var(--ok)">✓ 签名校验</b></div>
+        <div class="devstat">你的电视：Sony BRAVIA · <b>已适配 ✓</b>（社区配置 v2026.10）——未适配机型走「本机报告」一键上报</div>
           <div class="mrows">
             <div class="mrow off foc" data-act="toggle" data-nm="开屏推荐服务">
               <div class="mi"><div class="t">开屏推荐服务</div><div class="d">启动时的内容推荐位 · 停用后开机直达桌面</div></div>
@@ -889,9 +930,34 @@ a{color:inherit}
             <div class="lg"><span class="tt">10-22</span><span class="a">停用</span><span>应用商城推送 → 已回滚</span></div>
             <div class="lg"><span class="tt">10-21</span><span>—</span><span>首次生成基线快照（12 项）</span></div>
           </div>
+          <div class="snapcard">
+            <div class="h">基线快照 · 12 项 · 10-21 创建</div>
+            <div class="sd">出厂状态的完整存档。<b>一键恢复</b>=撤销本次会话的停用；<b>从快照恢复</b>=回到爆改开始之前。OTA 升级前会自动提醒重建。</div>
+            <div class="sb">
+              <span class="sbtn2 foc" data-act="toast" data-msg="从快照恢复：12 项全部回到出厂状态（执行前会二次确认并记入日志）">从快照恢复</span>
+              <span class="sbtn3 foc" data-act="toast" data-msg="重建快照：以当前状态为新基线，旧快照自动归档">重建快照</span>
+            </div>
+          </div>
           <div class="restore foc" data-act="restore">一键恢复原厂（5 项）</div>
-          <div class="restore foc" data-act="toast" data-msg="机型报告已生成（型号+包清单+状态）→ 导出 JSON 存入私有库待审；开源版为自动填 GitHub 工单" style="background:var(--card);color:var(--txt);border:1px solid var(--line)">本机报告 · 一键上报</div>
+          <div class="restore foc" data-act="report" style="background:var(--card);color:var(--txt);border:1px solid var(--line)">本机报告 · 一键上报</div>
           <div class="mnote">品牌专属包名库仅存于私有自用分支；开源版仅提供通用组件与手动输入（分层发布红线）。OTA 后自动复查停用项状态并提醒。</div>
+      </div>
+      <div class="sheet" id="rep9">
+        <div class="sheet-panel">
+          <div class="shh">本机报告</div>
+          <div class="shs">上报前可核对 · 数据仅存本机，导出才离开电视</div>
+          <div class="srow"><span>设备型号</span><b>Sony BRAVIA（演示数据）</b></div>
+          <div class="srow"><span>系统</span><b>Android TV 13 · API 33</b></div>
+          <div class="srow"><span>系统应用</span><b>218 · 可停用候选 12 · 已停用 2</b></div>
+          <div class="srow"><span>适配来源</span><b>社区配置 v2026.10 · MIT</b></div>
+          <div class="srow" style="border-bottom:none"><span>报告指纹</span><b>a3f9…c21e（可校验）</b></div>
+          <div class="sacts">
+            <span class="sbtn foc" data-act="toast" data-msg="已导出：tv-mod-report-20261026.json（手机助手 · 文件区可取）">导出 JSON</span>
+            <span class="sbtn2 foc" data-act="toast" data-msg="开源版形态：自动填写 GitHub 机型支持工单（演示）">生成上报工单</span>
+            <span class="sbtn3 foc" data-act="closesheet">关闭</span>
+          </div>
+        </div>
+      </div>
         </div>
       </div>
     </section>
@@ -980,6 +1046,80 @@ a{color:inherit}
       </div>
     </section>
 
+    <!-- P12 设置 -->
+    <section class="page" id="p12">
+      <div class="topbar" style="padding-bottom:1vh">
+        <div class="brand">设置<small>SETTINGS</small></div>
+        <div class="spacer"></div>
+        <div class="status"><span class="pill">tv-mod v0.1</span><span class="pill acc">数据仅存本机</span></div>
+      </div>
+      <div class="settings">
+        <div class="setcol">
+          <div class="setsec">
+            <div class="sh2">配置中心</div>
+            <div class="setrow foc" data-act="toast" data-msg="配置已是最新：v2026.10 · minisign 验签通过（2 分钟前检查）">
+              <div class="mi"><div class="t">设备配置库</div><div class="d">v2026.10 · 131 型型 / 46 品牌</div></div>
+              <div class="tgl"><span class="lb" style="color:var(--ok)">最新</span></div>
+            </div>
+            <div class="setrow foc" data-act="toast" data-msg="检查更新：拉取远程清单 → minisign 验签 → 差量下载 → 应用（演示）">
+              <div class="mi"><div class="t">检查配置更新</div><div class="d">远程清单 · 签名校验后应用</div></div>
+              <span class="arrow">›</span>
+            </div>
+            <div class="setrow foc" data-act="toast" data-msg="机型覆盖浏览：46 品牌列表与各机型支持项（演示）">
+              <div class="mi"><div class="t">浏览机型覆盖</div><div class="d">本机已适配 · 查看全部 131 型号</div></div>
+              <span class="arrow">›</span>
+            </div>
+          </div>
+          <div class="setsec">
+            <div class="sh2">安装与配对</div>
+            <div class="setrow on foc" data-act="toast" data-msg="网络调试（一次性配对，完成即关）：开启后手机可免确认全自动安装；已配对设备 2 台">
+              <div class="mi"><div class="t">网络调试 · 免确认安装</div><div class="d">已配对 2 台设备 · 密钥仅存本机</div></div>
+              <div class="tgl"><span class="tk"></span><span class="lb">已开启</span></div>
+            </div>
+            <div class="setrow foc" data-act="nav" data-to="8">
+              <div class="mi"><div class="t">手机配对助手</div><div class="d">扫码 · 双通道安装 · 无线键盘</div></div>
+              <span class="arrow">›</span>
+            </div>
+          </div>
+        </div>
+        <div class="setcol">
+          <div class="setsec">
+            <div class="sh2">外观</div>
+            <div class="setrow foc" data-act="nav" data-to="3">
+              <div class="mi"><div class="t">皮肤工坊</div><div class="d">四套预设 + 我的皮肤拼装</div></div>
+              <span class="arrow">›</span>
+            </div>
+            <div class="setrow on foc" data-act="toast" data-msg="壁纸随皮肤切换（关=保留当前壁纸只换强调色与材质）">
+              <div class="mi"><div class="t">壁纸随皮肤切换</div></div>
+              <div class="tgl"><span class="tk"></span><span class="lb">开</span></div>
+            </div>
+          </div>
+          <div class="setsec">
+            <div class="sh2">声音与反馈</div>
+            <div class="setrow on foc" data-act="toast" data-msg="提示音：操作确认/完成提示（音量随系统）">
+              <div class="mi"><div class="t">操作提示音</div></div>
+              <div class="tgl"><span class="tk"></span><span class="lb">开</span></div>
+            </div>
+            <div class="setrow foc" data-act="toast" data-msg="开机直达桌面：开机跳过厂商首页直接进 tv-mod（需设为默认桌面）">
+              <div class="mi"><div class="t">开机直达桌面</div><div class="d">设为默认桌面后生效</div></div>
+              <div class="tgl"><span class="tk"></span><span class="lb">关</span></div>
+            </div>
+          </div>
+          <div class="setsec">
+            <div class="sh2">关于</div>
+            <div class="setrow foc" data-act="toast" data-msg="tv-mod v0.1 · 个人爆改工程 · 开源底盘 MIT · 分层发布红线见项目 PRD">
+              <div class="mi"><div class="t">关于 tv-mod</div><div class="d">v0.1 · 开源底盘 MIT · 自用版</div></div>
+              <span class="arrow">›</span>
+            </div>
+            <div class="setrow foc" data-act="toast" data-msg="数据导出：设置/皮肤/日志打包 JSON（手机助手可取；数据仅存本机）">
+              <div class="mi"><div class="t">导出我的数据</div><div class="d">设置 · 皮肤 · 操作日志</div></div>
+              <span class="arrow">›</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </div>
 </div>
 
@@ -999,7 +1139,7 @@ a{color:inherit}
 
 <script>
 /* ============ 路由 ============ */
-const PAGES=[null,"总览","桌面","皮肤工坊","浮层面板","媒体库","播放器","投屏接收","手机助手","清理维护","音乐律动","游戏"];
+const PAGES=[null,"总览","桌面","皮肤工坊","浮层面板","媒体库","播放器","投屏接收","手机助手","清理维护","音乐律动","游戏","设置"];
 const TOTAL=PAGES.length-1;
 const screen=document.getElementById('screen');
 let cur=1,booting=false;
@@ -1037,6 +1177,8 @@ function show(n,push=true){
   booting=false;
 }
 function goback(){
+  const sh=document.querySelector('.sheet.open');
+  if(sh){sh.classList.remove('open');focusFirst();return}
   if(navStack.length)show(navStack.pop(),false);
   else if(cur!==1)show(1,false);
 }
@@ -1056,7 +1198,8 @@ function renderDeck(){
 let focusables=[],fidx=-1;
 function collectFocus(){
   const page=document.getElementById('p'+cur);
-  focusables=[...page.querySelectorAll('.foc')].filter(el=>el.offsetParent!==null);
+  const root=page.querySelector('.sheet.open')||page;
+  focusables=[...root.querySelectorAll('.foc')].filter(el=>el.offsetParent!==null);
   return focusables;
 }
 function setFocus(i,scroll=true){
