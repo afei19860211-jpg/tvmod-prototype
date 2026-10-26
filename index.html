@@ -429,6 +429,77 @@ a{color:inherit}
 .ovcard .d{font-size:.86cqw;color:var(--dim);line-height:1.7}
 .ovfoot{display:flex;justify-content:space-between;font-size:.82cqw;color:var(--faint)}
 
+/* ============ P10 音乐·律动 ============ */
+.music{flex:1;display:flex;gap:1.6cqw;padding:2.2cqw 2.4cqw;min-height:0}
+.nowplay{flex:1.15;display:flex;flex-direction:column;border-radius:1cqw;border:1px solid var(--line);
+  background:linear-gradient(160deg,color-mix(in srgb,var(--acc) 14%,transparent),rgba(8,10,16,.6));padding:2cqw 1.8cqw;min-height:0}
+.np-art{width:9cqw;aspect-ratio:1;border-radius:.8cqw;flex:none;position:relative;overflow:hidden;
+  background:radial-gradient(80% 80% at 70% 20%,#7a4a1f,#1a0e06),conic-gradient(from 210deg at 50% 50%,transparent 0 40%,rgba(255,180,94,.25) 50%,transparent 60%)}
+.np-art::after{content:"";position:absolute;inset:38%;border-radius:50%;background:#0b0806;box-shadow:0 0 0 .18cqw rgba(255,255,255,.15)}
+.np-top{display:flex;gap:1.4cqw;align-items:center}
+.np-t{font-size:1.7cqw;font-weight:800}
+.np-a{font-size:.9cqw;color:var(--dim);margin-top:.3cqw}
+.np-tag{margin-left:auto;text-align:right;font-size:.72cqw;color:var(--faint);line-height:1.8}
+.spec{display:flex;align-items:flex-end;gap:.42cqw;height:5.6cqw;margin:1.6cqw 0 .8cqw}
+.spec i{flex:1;border-radius:.2cqw .2cqw 0 0;background:linear-gradient(180deg,var(--acc),color-mix(in srgb,var(--acc) 25%,transparent));animation:bar 1.05s ease-in-out infinite alternate}
+.spec i:nth-child(2n){animation-duration:.72s;animation-delay:.08s}
+.spec i:nth-child(3n){animation-duration:1.3s;animation-delay:.16s}
+.spec i:nth-child(4n){animation-duration:.86s;animation-delay:.24s}
+.spec i:nth-child(5n){animation-duration:1.5s}
+@keyframes bar{from{height:16%}to{height:94%}}
+.np-ctrl{display:flex;gap:.9cqw;margin-top:auto}
+.npbtn{display:flex;align-items:center;justify-content:center;background:var(--card);border:1px solid var(--line);border-radius:.7cqw;font-size:.9cqw;padding:.9cqw 1.2cqw}
+.npbtn.main{background:#fff;color:#000;border-color:transparent;font-weight:800}
+.npbtn svg{width:1cqw;height:1cqw;fill:#fff;stroke:none}
+.npbtn.main svg{fill:#000}
+.music-side{flex:1;display:flex;flex-direction:column;gap:1cqw;min-height:0}
+.albwall{flex:1;display:grid;grid-template-columns:repeat(3,1fr);gap:.9cqw;min-height:0}
+.alb{border-radius:.6cqw;position:relative;overflow:hidden;border:1px solid var(--line)}
+.alb i{position:absolute;inset:0}
+.alb .an{position:absolute;left:.5cqw;bottom:.4cqw;font-size:.72cqw;font-weight:700;text-shadow:0 1px 5px #000}
+.alb1 i{background:radial-gradient(70% 70% at 30% 25%,#3b6fa0,#0a1522)}
+.alb2 i{background:conic-gradient(from 40deg at 60% 40%,#5e2a12,#12060a 60%,#3a1a2e)}
+.alb3 i{background:radial-gradient(90% 60% at 50% 90%,#0d5c46,#04100d)}
+.alb4 i{background:linear-gradient(140deg,#2e2a3d,#08070d)}
+.alb5 i{background:radial-gradient(60% 60% at 75% 30%,#a3542a,#160a04)}
+.alb6 i{background:conic-gradient(from 200deg at 30% 60%,#1d5f8a,#030a12)}
+.beatbar{display:flex;align-items:center;gap:1cqw;background:var(--card2);border:1px solid var(--line);border-radius:.9cqw;padding:1.1cqw 1.3cqw}
+.beatbar .bt{font-size:.86cqw;font-weight:700;flex:none}
+.beatbar .bchips{display:flex;gap:.6cqw}
+.bchip{padding:.5cqw 1cqw;border-radius:99px;font-size:.8cqw;background:transparent;border:1px solid var(--line);color:var(--dim)}
+.bchip.cur{background:#fff;color:#000;font-weight:700;border-color:transparent}
+.lightstrip{flex:1;height:.7cqw;border-radius:99px;min-width:8cqw;overflow:hidden;position:relative;
+  background:linear-gradient(90deg,var(--acc),#ff6482,var(--acc));background-size:200% 100%;animation:flow 2.4s linear infinite}
+@keyframes flow{from{background-position:0 0}to{background-position:200% 0}}
+.beatbar .ls-n{font-size:.72cqw;color:var(--faint);flex:none}
+
+/* ============ P11 游戏 ============ */
+.games{flex:1;display:flex;flex-direction:column;padding:2.2cqw 2.4cqw;gap:1.2cqw;min-height:0}
+.games .h{font-size:1.5cqw;font-weight:800}
+.grow3{flex:1;display:flex;gap:1.2cqw;min-height:0}
+.gcard{flex:1;border-radius:1cqw;border:1px solid var(--line);background:var(--card2);padding:1.6cqw 1.5cqw;display:flex;flex-direction:column;min-height:0}
+.gcard .gz{font-size:.7cqw;color:var(--faint);letter-spacing:.2em;margin-bottom:.8cqw}
+.gcard .gt{font-size:1.25cqw;font-weight:800}
+.gcard .gi{font-size:.84cqw;color:var(--dim);margin-top:.4cqw;line-height:1.7}
+.gviz{flex:1;margin:1.2cqw 0;display:flex;align-items:center;justify-content:center;position:relative;min-height:0}
+/* G1 遥控器小游戏视觉：2048 迷你格 */
+.mini2048{display:grid;grid-template-columns:repeat(4,1fr);gap:.4cqw;width:10cqw;aspect-ratio:1}
+.mini2048 i{border-radius:.4cqw;background:var(--card)}
+.mini2048 i.on{background:var(--acc)}
+.mini2048 i.on2{background:#ff9f0a}
+/* G2 手机手柄视觉 */
+.padphone{width:8.4cqw;aspect-ratio:9/16;border-radius:1cqw;border:2px solid var(--line);position:relative;background:rgba(0,0,0,.35)}
+.padphone .stick{position:absolute;left:12%;bottom:12%;width:44%;aspect-ratio:1;border-radius:50%;border:2px solid var(--line)}
+.padphone .stick::after{content:"";position:absolute;inset:26%;border-radius:50%;background:var(--acc);opacity:.85}
+.padphone .btns{position:absolute;right:10%;bottom:14%;width:34%;aspect-ratio:1}
+.padphone .btns i{position:absolute;width:46%;aspect-ratio:1;border-radius:50%;background:var(--card);border:1px solid var(--line)}
+.padphone .btns i:nth-child(1){left:0;top:0}.padphone .btns i:nth-child(2){right:0;top:26%}
+.padphone .btns i:nth-child(3){left:0;top:52%}.padphone .btns i:nth-child(4){right:0;top:78%}
+.padphone .conn{position:absolute;top:8%;left:0;right:0;text-align:center;font-size:.56cqw;color:var(--ok)}
+/* G3 蓝牙手柄 */
+.bpad svg{width:12cqw;height:7cqw;stroke:#fff;fill:none;stroke-width:1.4}
+.gnote{font-size:.76cqw;color:var(--faint);line-height:1.9}
+
 /* ============ 框外：页面切换条 + d-pad + toast ============ */
 .deck{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:2.2vh;max-width:1180px}
 .dchip{border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--dim);border-radius:99px;
@@ -475,7 +546,7 @@ a{color:inherit}
     <section class="page" id="p1">
       <div class="ov">
         <div class="h">这台电视是我的。</div>
-        <div class="s">tv-mod 原型总览，<b>9 页，P0/P1 全模块</b>。电视框内按 <b>方向键 + OK</b> 操作（手机点右下角遥控盘），逐页评审。</div>
+        <div class="s">tv-mod 原型总览，<b>11 页，P0-P3 全模块</b>。电视框内按 <b>方向键 + OK</b> 操作（手机点右下角遥控盘），逐页评审。</div>
         <div class="ovgrid">
           <div class="ovcard foc" data-act="nav" data-to="2"><div class="no">01 · 开始</div><div class="t">开始评审</div><div class="d">从桌面开始走一遍完整体验</div></div>
           <div class="ovcard foc" data-act="nav" data-to="2"><div class="no">02 · M6</div><div class="t">桌面</div><div class="d">AppleTV 风：大续看卡 + 横排应用，零广告零推荐</div></div>
@@ -486,6 +557,8 @@ a{color:inherit}
           <div class="ovcard foc" data-act="nav" data-to="7"><div class="no">07 · M1</div><div class="t">投屏接收</div><div class="d">来电直达播放器，零广告，接收历史</div></div>
           <div class="ovcard foc" data-act="nav" data-to="8"><div class="no">08 · M5</div><div class="t">手机配对助手</div><div class="d">浏览器扫码装 APK，双通道免电脑</div></div>
           <div class="ovcard foc" data-act="nav" data-to="9"><div class="no">09 · M10</div><div class="t">清理维护</div><div class="d">可逆停用 + 一键恢复，全程留日志</div></div>
+          <div class="ovcard foc" data-act="nav" data-to="10"><div class="no">10 · M12</div><div class="t">音乐律动</div><div class="d">听歌 + 灯带跟着节奏呼吸</div></div>
+          <div class="ovcard foc" data-act="nav" data-to="11"><div class="no">11 · M13</div><div class="t">游戏</div><div class="d">遥控器 / 手机手柄 / 蓝牙手柄三层输入</div></div>
         </div>
         <div class="ovfoot"><span>焦点光环=遥控选中态 · OK 键激活</span><span>媒体内容均为示意（合成海报 / 虚构片名）</span></div>
       </div>
@@ -782,7 +855,7 @@ a{color:inherit}
       <div class="maint">
         <div class="mlist">
           <div class="h">清理维护</div>
-          <div class="s"><b>pm disable-user 可逆停用</b> · 不卸载 · 不改系统分区 · 每一步都有日志</div>
+          <div class="s"><b>pm disable-user 可逆停用</b> · 不卸载 · 不改系统分区 · 每一步都有日志 · 适配库 <b style="color:var(--txt)">131 型号 / 46 品牌</b>（社区数据·MIT） · 配置 v2026.10 <b style="color:var(--ok)">✓ 签名校验</b></div>
           <div class="mrows">
             <div class="mrow off foc" data-act="toggle" data-nm="开屏推荐服务">
               <div class="mi"><div class="t">开屏推荐服务</div><div class="d">启动时的内容推荐位 · 停用后开机直达桌面</div></div>
@@ -817,8 +890,93 @@ a{color:inherit}
             <div class="lg"><span class="tt">10-21</span><span>—</span><span>首次生成基线快照（12 项）</span></div>
           </div>
           <div class="restore foc" data-act="restore">一键恢复原厂（5 项）</div>
+          <div class="restore foc" data-act="toast" data-msg="机型报告已生成（型号+包清单+状态）→ 导出 JSON 存入私有库待审；开源版为自动填 GitHub 工单" style="background:var(--card);color:var(--txt);border:1px solid var(--line)">本机报告 · 一键上报</div>
           <div class="mnote">品牌专属包名库仅存于私有自用分支；开源版仅提供通用组件与手动输入（分层发布红线）。OTA 后自动复查停用项状态并提醒。</div>
         </div>
+      </div>
+    </section>
+
+    <!-- P10 音乐·律动 -->
+    <section class="page" id="p10">
+      <div class="topbar" style="padding-bottom:1vh">
+        <div class="brand">音乐<small>MUSIC</small></div>
+        <div class="spacer"></div>
+        <div class="status"><span class="dot"></span><span>NAS/WebDAV · 音乐库 1,247 首</span><span class="pill">无损直通</span></div>
+      </div>
+      <div class="music">
+        <div class="nowplay">
+          <div class="np-top">
+            <div class="np-art"></div>
+            <div>
+              <div class="np-t">北纬四十度的风</div>
+              <div class="np-a">匿名歌手 · 《公路三部曲》 · 2025 · FLAC</div>
+            </div>
+            <div class="np-tag">OK 播放/暂停<br>← → 切曲 · ↑↓ 音量</div>
+          </div>
+          <div class="spec"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="rbar" style="margin-bottom:.6cqw"><i style="width:52%"></i></div>
+          <div class="rd" style="font-size:.78cqw"><span>2:41</span><span>4:58</span></div>
+          <div class="np-ctrl">
+            <div class="npbtn foc" data-act="toast" data-msg="上一曲（← 键同功能）"><svg viewBox="0 0 24 24"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg></div>
+            <div class="npbtn main foc" data-act="toast" data-msg="暂停 / 播放（OK 键同功能）"><svg viewBox="0 0 24 24"><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg></div>
+            <div class="npbtn foc" data-act="toast" data-msg="下一曲（→ 键同功能）"><svg viewBox="0 0 24 24"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg></div>
+            <div class="npbtn foc" data-act="toast" data-msg="队列：12 首 · 顺序播放（手机助手可拖动排序）">队列 12</div>
+          </div>
+        </div>
+        <div class="music-side">
+          <div class="albwall">
+            <div class="alb foc alb1" data-act="toast" data-msg="播放专辑《深海回声》原声带 · 8 首"><i></i><div class="an">深海回声 OST</div></div>
+            <div class="alb foc alb2" data-act="toast" data-msg="播放专辑《雨季不再来》· 10 首"><i></i><div class="an">雨季不再来</div></div>
+            <div class="alb foc alb3" data-act="toast" data-msg="播放专辑《雪线》· 6 首"><i></i><div class="an">雪线</div></div>
+            <div class="alb foc alb4" data-act="toast" data-msg="播放歌单「深夜驾驶」· 34 首"><i></i><div class="an">深夜驾驶</div></div>
+            <div class="alb foc alb5" data-act="toast" data-msg="播放专辑《候鸟》· 9 首"><i></i><div class="an">候鸟</div></div>
+            <div class="alb foc alb6" data-act="toast" data-msg="播放歌单「电台存档」· 87 首"><i></i><div class="an">电台存档</div></div>
+          </div>
+          <div class="beatbar">
+            <span class="bt">氛围灯</span>
+            <div class="bchips">
+              <div class="bchip foc cur" data-act="beat" data-v="柔和律动">柔和律动</div>
+              <div class="bchip foc" data-act="beat" data-v="强劲律动">强劲律动</div>
+              <div class="bchip foc" data-act="beat" data-v="纯取色">纯取色</div>
+              <div class="bchip foc" data-act="toast" data-msg="氛围灯关闭（再按任一档位开启）">关</div>
+            </div>
+            <div class="lightstrip"></div>
+            <span class="ls-n">灯带 · 6 区<br>已连接</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- P11 游戏 -->
+    <section class="page" id="p11">
+      <div class="topbar" style="padding-bottom:1vh">
+        <div class="brand">游戏<small>PLAY</small></div>
+        <div class="spacer"></div>
+        <div class="status"><span class="pill">输入三层</span><span class="pill acc">手机即手柄</span></div>
+      </div>
+      <div class="games">
+        <div class="h">按输入方式挑游戏</div>
+        <div class="grow3">
+          <div class="gcard foc" data-act="toast" data-msg="G1 遥控器小游戏合集：十字键+OK 直接玩（2048/纸牌/贪吃蛇级，内置自研）">
+            <div class="gz">G1 · 遥控器</div><div class="gt">放下遥控器就能玩</div>
+            <div class="gi">轻休闲合集——十字键 + OK，零学习成本，谁来了都能上手。</div>
+            <div class="gviz"><div class="mini2048"><i class="on"></i><i></i><i class="on2"></i><i></i><i></i><i class="on"></i><i></i><i></i><i class="on2"></i><i></i><i class="on"></i><i></i><i></i><i class="on"></i><i></i><i class="on2"></i></div></div>
+            <div class="gnote">内置自研 · 焦点引擎复用 · 离线</div>
+          </div>
+          <div class="gcard foc" data-act="toast" data-msg="G2 手机虚拟手柄：手机扫码（复用配对通道）→ 网页变手柄，虚拟摇杆+AB键，WebView 承载 H5 游戏，零安装">
+            <div class="gz">G2 · 手机虚拟手柄 ⭐</div><div class="gt">口袋里那台就是手柄</div>
+            <div class="gi">扫码连上配对通道，手机网页秒变手柄——虚拟摇杆+按键，玩中度 H5 游戏。</div>
+            <div class="gviz"><div class="padphone"><div class="conn">● 已连 tv-mod · 延迟 43ms</div><div class="stick"></div><div class="btns"><i></i><i></i><i></i><i></i></div></div></div>
+            <div class="gnote">复用 M5 配对通道 · 目标延迟 ≤80ms · 双人=两台手机</div>
+          </div>
+          <div class="gcard bpad foc" data-act="toast" data-msg="G3 蓝牙手柄：Android 原生 GameController API，常见手柄即插即玩，按键映射可自定义；模拟器=引擎+本地ROM导入，不内置不下载">
+            <div class="gz">G3 · 蓝牙手柄</div><div class="gt">认真的游戏时间</div>
+            <div class="gi">动作与模拟器类。手柄即插即玩，按键映射随心配。</div>
+            <div class="gviz"><svg viewBox="0 0 120 70"><rect x="10" y="18" width="100" height="36" rx="16"/><circle cx="34" cy="36" r="10"/><circle cx="86" cy="30" r="4.5"/><circle cx="96" cy="38" r="4.5"/><circle cx="76" cy="38" r="4.5"/><circle cx="86" cy="46" r="4.5"/><path d="M52 26h16M60 18v16"/></svg></div>
+            <div class="gnote">红线：模拟器仅引擎+本地 ROM 导入，不内置、不下载、不聚合</div>
+          </div>
+        </div>
+        <div class="gnote" style="margin-top:.2cqw">G1-G3 输入分层源自 PRD M13：遥控器轻休闲 / 手机虚拟手柄（独有优势）/ 蓝牙手柄硬核 · v1.3 的 H5 游戏以自用定位在三批回归</div>
       </div>
     </section>
 
@@ -841,7 +999,7 @@ a{color:inherit}
 
 <script>
 /* ============ 路由 ============ */
-const PAGES=[null,"总览","桌面","皮肤工坊","浮层面板","媒体库","播放器","投屏接收","手机助手","清理维护"];
+const PAGES=[null,"总览","桌面","皮肤工坊","浮层面板","媒体库","播放器","投屏接收","手机助手","清理维护","音乐律动","游戏"];
 const TOTAL=PAGES.length-1;
 const screen=document.getElementById('screen');
 let cur=1,booting=false;
